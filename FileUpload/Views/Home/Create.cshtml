@@ -1,0 +1,32 @@
+﻿
+@model CreateProductVM
+<h1>Blog Yazısı Oluştur</h1>
+<form asp-controller="Home" asp-action="Create"  enctype="multipart/form-data">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="Description"></label>
+        <input asp-for="Description" class="form-control" />
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="Price"></label>
+        <input asp-for="Price" class="form-control"></input>
+        <span asp-validation-for="Price" class="text-danger"></span>
+    </div><br />
+    <div class="form-group">
+        <label asp-for="ImageUrl"></label>
+        <input asp-for="ImageUrl" class="form-control" multiple />
+        <span asp-validation-for="ImageUrl" class="text-danger"></span>
+
+    </div>
+    <br />
+   
+    <button type="submit" class="btn btn-primary">KAYDET</button>
+</form>
